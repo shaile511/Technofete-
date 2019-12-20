@@ -1,0 +1,20 @@
+<?php
+    session_start();
+$_SESSION['log']=false;
+$_SESSION['view']=false;
+
+if($_SESSION['log'])
+{
+	session_unset($_SESSION['log']);
+	session_unset($_SESSION['msg']);
+	session_unset($_SESSION['roll']);
+	session_unset($_SESSION['name']);
+	session_unset();
+	session_destroy();
+    header('Location:../index.php');
+}
+else
+{
+    header('Location:../index.php');
+}
+?>
